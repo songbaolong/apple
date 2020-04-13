@@ -6,13 +6,33 @@
     <title>Document</title>
     <style>
         div {
-            background-color: blue;
+            background-color:#00ff37;
         }
     </style>
 </head>
 <body>
-    <div>this is a apple page</div>
+    <div id="yc-msg">Susan is a pig🐷</div>
     <div></div>
     <div>ssss</div>
+    <script>
+        function ycMsg() {
+    // 获取 标签
+    var pObj = document.getElementById('yc-msg');
+    // 获取文字内容
+    var text = document.getElementById('yc-msg').innerText;
+    timeID = setInterval(() => {
+        var start = text.substring(0, 1);
+        
+        var end = text.substring(1);
+        // 拼接字符串
+        text = end + start;
+        // 更换符号内容---
+        pObj.innerHTML = text;
+    }, 100);
+
+}
+
+ycMsg();
+    </script>
 </body>
 </html>
